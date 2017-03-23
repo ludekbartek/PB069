@@ -16,6 +16,10 @@ namespace FunctionsDrawing
     {
         private List<Function> functions = new List<Function>();
 
+        public delegate double DrawFunction(double x);
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +30,7 @@ namespace FunctionsDrawing
         {
             clearImage(pictureBox1.Image);
             functions = new List<Function>();
+            pictureBox1.Refresh();
         }
 
         private void clearImage(Image image)
@@ -63,34 +68,28 @@ namespace FunctionsDrawing
                 drawAxes(e.Graphics, pictureBox1.Width, pictureBox1.Height);
                 foreach (Function func in functions)
                 {
-                    drawFunction(e.Graphics, func);
+                    drawGraph(e.Graphics, func);
                 }
         }
 
         private void drawFunction(Graphics graphics, Function func)
         {
-            if(func.function == Kind.sin)
-            {
-                drawSin(graphics, func);
-            }
-            else
-            {
-                drawCos(graphics, func);
-            }
+                drawGraph(graphics, func);
         }
 
-        private void drawSin(Graphics graphics, Function func)
+        private void drawGraph(Graphics graphics, Function func)
         {
             double stepX = 4 * Math.PI / pictureBox1.Width;
             double coefY = pictureBox1.Height / 10;
             double x = -2*Math.PI;
-            int lastY = pictureBox1.Height / 2; 
+            int lastY = (int)(pictureBox1.Height/2 - func.a * func.function(func.f * x)*coefY);
+            Pen pen = new Pen(func.color);
             for(int i=1;i<pictureBox1.Width;i++)
             {
                 x += stepX;
-                double y = func.a * Math.Sin(func.f * x);
+                double y = func.a * func.function(func.f * x);
                 int yCoord = (int)(pictureBox1.Height / 2 - coefY * y);
-                graphics.DrawLine(Pens.Black, i - 1, lastY, i, yCoord);
+                graphics.DrawLine(pen, i - 1, lastY, i, yCoord);
                 lastY = yCoord;
                 
             }
@@ -163,14 +162,22 @@ namespace FunctionsDrawing
         private Function line2Function(string line)
         {
             string[] parts = line.Split(';');
-            if (parts.Length != 3)
+            if (parts.Length != 4)
             {
                 throw new InvalidDataException("The line format is wrong: " + line);
             }
             Function func = new Function();
-            func.function=(Kind)(Int16.Parse(parts[0]));
+            if (parts[0] == "0")
+            {
+                func.function = Math.Sin;
+            }
+            else
+            {
+                func.function = Math.Cos;
+            }
             func.a = Int16.Parse(parts[1]);
             func.f = Int16.Parse(parts[2]);
+            func.color = Color.FromName(parts[3]);
             return func;
         }
 
@@ -197,4 +204,24 @@ namespace FunctionsDrawing
             Application.Exit();
         }
     }
+
+    public class Function
+    {
+        public Form1.DrawFunction function { get; set; }
+        public int a { get; set; }
+        public int f { get; set; }
+        public Color color { get; set; }
+
+        public override string ToString()
+        {
+            string str = null;
+            if (function == Math.Sin)
+            {
+                return 0 + ";" + a + ";" + f +";" +color.Name;
+            }
+            return 1 + ";" + a + ";" + f + ";" + color.Name;
+
+        }
+    }
+
 }

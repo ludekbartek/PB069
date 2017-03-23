@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace FunctionsDrawing
 {
+
     public partial class AddFunction : Form
     {
 
@@ -28,6 +29,12 @@ namespace FunctionsDrawing
                 comboBox1.Focus();
                 return;
             }
+            if(colorCombo.SelectedIndex < 0)
+            {
+                DialogResult = DialogResult.None;
+                colorCombo.Focus();
+                return;
+            }
             if(aUpDown1.Value == 0)
             {
                 DialogResult = DialogResult.None;
@@ -42,8 +49,24 @@ namespace FunctionsDrawing
             }
             function = new Function();
             function.a = (int)aUpDown1.Value;
-            function.function = (Kind)comboBox1.SelectedIndex;
+            function.color = (Color)colorCombo.SelectedItem;
+            if(comboBox1.SelectedIndex==0)
+            {
+                function.function = Math.Sin;
+            }
+            else
+            {
+                function.function = Math.Cos;
+            }
             function.f = (int)fUpDown.Value;
+        }
+
+        private void AddFunction_Load(object sender, EventArgs e)
+        {
+            colorCombo.Items.Add(Color.Black);
+            colorCombo.Items.Add(Color.Red);
+            colorCombo.Items.Add(Color.Green);
+            colorCombo.Items.Add(Color.Blue);
         }
     }
 }
