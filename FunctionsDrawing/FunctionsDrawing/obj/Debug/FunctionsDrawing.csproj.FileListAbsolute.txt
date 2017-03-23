@@ -1,0 +1,10 @@
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe.config
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.pdb
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csprojResolveAssemblyReference.cache
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Form1.resources
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Properties.Resources.resources
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.GenerateResource.Cache
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.exe
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.pdb
+D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.AddFunction.resources
