@@ -28,7 +28,7 @@ namespace Kartoteka_drag_n_drop
         {
             if(e.Data != null)
             {
-                ShowObject((GraphicalObject)e.Data,e.X - pictureBox1.Location.X,e.Y - pictureBox1.Location.Y);
+                ShowObject((GraphicalObject)e.Data,e.X - this.Top - pictureBox1.Location.X,e.Y - this.Left - pictureBox1.Location.Y);
             }
         }
 
