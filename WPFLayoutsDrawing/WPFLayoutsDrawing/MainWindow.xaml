@@ -1,0 +1,89 @@
+﻿<Window x:Class="WPFLayoutsDrawing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLayoutsDrawing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" Name="MenuBarRow"/>
+            <RowDefinition Height="40" Name="ToolBarRow"/>
+            <RowDefinition Height="*" Name="DrawingPaneRow"/>
+            <RowDefinition Height="20" Name="StatusBarRow"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="New" Name="NewMenuItem" Click="NewMenuItem_Click"/>
+                <Separator/>
+                <MenuItem Header="Open" Name="OpenMenuItem" Click="OpenMenuItem_Click"/>
+                <MenuItem Header="Save" Name="SaveMenuItem" Click="SaveMenuItem_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Name="ExitMenuItem" Click="ExitMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Shape">
+                <MenuItem Header="Rectangle" Name="LineMenuItem" Click="LineMenuItem_Click"/>
+                <MenuItem Header="Circle" Name="CircleMenuItem" Click="CircleMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar Height="40" Grid.Row="1">
+            <Button Name="NewToolButton" Click="NewMenuItem_Click">
+                <StackPanel>
+                    <Image Height="15" Width="20" Source="http://www.clipartkid.com/images/536/new-file-simple-clip-art-at-clker-com-vector-clip-art-online-FoVPmC-clipart.png"/>
+                    <TextBlock>New</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="OpenToolButton" Click="OpenMenuItem_Click">
+                <StackPanel>
+                    <Image Height="15" Width="20" Source="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQlptulIFSnFZDOhknuYPdbJC8TdsrHaEzeOgVsmCeCtJ1LupIoWg"/>
+                    <TextBlock>Open</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="SaveToolButton" Click="SaveMenuItem_Click">
+                <StackPanel>
+                    <Image Height="15" Width="20" Source="http://demo.sc.chinaz.com/Files/pic/icons/5546/12.png"/>
+                    <TextBlock>Save</TextBlock>
+                </StackPanel>
+            </Button>
+            <Separator/>
+            <Button Name="RectangleTooButton" Click="LineMenuItem_Click">
+                <StackPanel>
+                    <Canvas Height="15" Width="20">
+                        <Rectangle Width="20" Height="15" Stroke="Black"/>
+                    </Canvas>
+                    <TextBlock>Rectangle</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Circle" Click="CircleMenuItem_Click">
+                <StackPanel>
+                    <Canvas Height="15" Width="20">
+                        <Ellipse Width="15" Height="15" Canvas.Top="0" Canvas.Left="2" Stroke="Black"/>
+                    </Canvas>
+                    <TextBlock>Circle</TextBlock>
+                </StackPanel>
+            </Button>
+            <ComboBox Name="ColorBox" Width="50" Text="Shape Color" SelectionChanged="ColorBox_SelectionChanged">
+                <ComboBoxItem Background="Red" Name="RedBoxItem">
+                    <TextBlock> </TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Background="Green" Name="GreeBoxItem">
+                    <TextBlock> </TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Background="Blue" Name="BlueBoxItem">
+                    <TextBlock> </TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Background="Black" IsSelected="True" Name="BlackBoxItem">
+                    <TextBlock> </TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+        </ToolBar>
+        <Canvas Name="Canvas" Grid.Row="2" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp"></Canvas>
+        <StatusBar Grid.Row="3">
+            <StatusBarItem>
+                <TextBlock>Shape:</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Name="StatusShape"> </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
