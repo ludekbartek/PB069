@@ -26,19 +26,16 @@ namespace WPFLayoutsDrawing
 
     public class MyShape
     {
-        
         public double x { get; set; }
         public double y { get; set; }
         public double dx { get; set; }
         public double dy { get; set; }
         public int kind { get; set; }
         public COLORS color { get; set; }
-
         
-
         public override string ToString()
         {
-            return $"{kind},{x},{y},{dx},{dy},{(int)color}";
+            return $"{kind};{x};{y};{dx};{dy};{(int)color}";
         }
     }
     public partial class MainWindow : Window
@@ -84,7 +81,6 @@ namespace WPFLayoutsDrawing
                     shapes.Add(shape);
 
                     drawShape(shape);
-                    //Canvas.Children.Add(shape);
                 }
             }
         }
@@ -118,7 +114,6 @@ namespace WPFLayoutsDrawing
                     break;
                
             }
-            //current.Stroke = color;
             Canvas.Children.Add(current);
             Canvas.SetTop(current, shape.y);
             Canvas.SetLeft(current, shape.x);
@@ -127,7 +122,7 @@ namespace WPFLayoutsDrawing
         private MyShape lineToShape(string line)
         {
             MyShape shape = new MyShape();
-            String[] parts = line.Split(',');
+            String[] parts = line.Split( new char[] { ';' },6);
 
             if (parts.Length != 6)
             {
@@ -181,24 +176,26 @@ namespace WPFLayoutsDrawing
         private void LineMenuItem_Click(object sender, RoutedEventArgs e)
         {
             LineMenuItem.IsChecked = true;
+            CircleMenuItem.IsChecked = false;
             currentShape = new Rectangle();
-            currentShape.Stroke = Brushes.Black;
+            currentShape.Stroke = (color==null ? Brushes.Black : color);
         }
 
         private void CircleMenuItem_Click(object sender, RoutedEventArgs e)
         {
             CircleMenuItem.IsChecked = true;
+            LineMenuItem.IsChecked = false;
             currentShape = new Ellipse();
-            currentShape.Stroke = Brushes.Black;
+            currentShape.Stroke = (color==null ? Brushes.Black : color);
             
         }
 
         
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
             if (currentShape != null)
             {
+                currentShape.Stroke = color;
                 Canvas.Children.Add(currentShape);
                 Point position = e.GetPosition(Canvas);
                 Canvas.SetLeft(currentShape, position.X);
@@ -251,11 +248,7 @@ namespace WPFLayoutsDrawing
             return COLORS.BLACK;
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
+        
         private void ColorBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ColorBox.SelectedItem == RedBoxItem)
@@ -270,11 +263,14 @@ namespace WPFLayoutsDrawing
             {
                 color = Brushes.Blue;
             }
-            if(ColorBox.SelectedItem == BlackBoxItem)
+            if (ColorBox.SelectedItem == BlackBoxItem)
             {
                 color = Brushes.Black;
             }
-            
+            if (currentShape != null)
+            {
+                currentShape.Stroke = color;
+            }
         }
     }
 }

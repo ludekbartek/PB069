@@ -64,7 +64,7 @@
                 </StackPanel>
             </Button>
             <ComboBox Name="ColorBox" Width="50" Text="Shape Color" SelectionChanged="ColorBox_SelectionChanged">
-                <ComboBoxItem Background="Red" Name="RedBoxItem">
+                <ComboBoxItem Background="Red" Name="RedBoxItem" >
                     <TextBlock> </TextBlock>
                 </ComboBoxItem>
                 <ComboBoxItem Background="Green" Name="GreeBoxItem">
