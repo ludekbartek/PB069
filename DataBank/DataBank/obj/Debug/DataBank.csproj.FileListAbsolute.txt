@@ -1,0 +1,16 @@
+C:\work\vyuka\pb069\2017\DataBank\DataBank\bin\Debug\DataBank.exe.config
+C:\work\vyuka\pb069\2017\DataBank\DataBank\bin\Debug\DataBank.exe
+C:\work\vyuka\pb069\2017\DataBank\DataBank\bin\Debug\DataBank.pdb
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.csprojResolveAssemblyReference.cache
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\MainWindow.g.cs
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\App.g.cs
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank_MarkupCompile.cache
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank_MarkupCompile.lref
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\MainWindow.baml
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.g.resources
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.Properties.Resources.resources
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.csproj.GenerateResource.Cache
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.exe
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\DataBank.pdb
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\AddMedium.g.cs
+C:\work\vyuka\pb069\2017\DataBank\DataBank\obj\Debug\AddMedium.baml
