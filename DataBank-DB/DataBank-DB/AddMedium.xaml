@@ -1,0 +1,33 @@
+﻿<Window x:Class="DataBank_DB.AddMedium"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBank_DB"
+        mc:Ignorable="d"
+        Title="AddMedium" Height="150" Width="300">
+    <StackPanel Orientation="Vertical">
+        <Separator Height="10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Titul:</TextBlock>
+            <Separator Width="17"/>
+            <TextBox Name="title" Width="150"></TextBox>
+            <Separator Width="40"/>
+            <Button Name="OK" Width="50" Click="OK_Click">OK</Button>
+        </StackPanel>
+        <Separator Height="10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Rok:</TextBlock>
+            <Separator Width="20"/>
+            <DatePicker Name="DataPicker"/>
+            <Separator Width="87"/>
+            <Button Name="Cancel" Width="50" Click="Cancel_Click">Cancel</Button>
+        </StackPanel>
+        <Separator Height="10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Režisér:</TextBlock>
+            <Separator Width="1"/>
+            <TextBox Name="director" Width="150"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
