@@ -63,20 +63,23 @@
                     <TextBlock>Circle</TextBlock>
                 </StackPanel>
             </Button>
-            <ComboBox Name="ColorBox" Width="50" Text="Shape Color" SelectionChanged="ColorBox_SelectionChanged">
-                <ComboBoxItem Background="Red" Name="RedBoxItem" >
-                    <TextBlock> </TextBlock>
-                </ComboBoxItem>
-                <ComboBoxItem Background="Green" Name="GreeBoxItem">
-                    <TextBlock> </TextBlock>
-                </ComboBoxItem>
-                <ComboBoxItem Background="Blue" Name="BlueBoxItem">
-                    <TextBlock> </TextBlock>
-                </ComboBoxItem>
-                <ComboBoxItem Background="Black" IsSelected="True" Name="BlackBoxItem">
-                    <TextBlock> </TextBlock>
-                </ComboBoxItem>
-            </ComboBox>
+            <StackPanel Width="50">
+                <ComboBox Name="ColorBox" Width="50" Text="Shape Color" SelectionChanged="ColorBox_SelectionChanged">
+                    <ComboBoxItem Background="Red" Name="RedBoxItem" >
+                        <TextBlock></TextBlock>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="Green" Name="GreeBoxItem">
+                        <TextBlock></TextBlock>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="Blue" Name="BlueBoxItem">
+                        <TextBlock></TextBlock>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="Black" IsSelected="True" Name="BlackBoxItem">
+                        <TextBlock></TextBlock>
+                    </ComboBoxItem>
+                </ComboBox>
+                <TextBlock FontSize="10">Shape Color</TextBlock>
+            </StackPanel>
         </ToolBar>
         <Canvas Name="Canvas" Grid.Row="2" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp"></Canvas>
         <StatusBar Grid.Row="3">

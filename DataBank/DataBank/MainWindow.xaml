@@ -28,12 +28,12 @@
             </MenuItem>
         </Menu>
         <ToolBar Grid.Row="1">
-            <Button Content="New"/>
-            <Button Content="Open"/>
-            <Button Content="Save"/>
+            <Button Content="New" Click="NewMenuItem_Click"/>
+            <Button Content="Open" Click="OpenMenuItem_Click"/>
+            <Button Content="Save" Click="SaveMenuItem_Click"/>
             <Separator />
-            <Button Content="Add"/>
-            <Button Content="Remove"/>
+            <Button Content="Add" Click="AddMenuItem_Click"/>
+            <Button Content="Remove" Click="RemoveMenuItem_Click"/>
         </ToolBar>
         <ListView Name="DataView" Grid.Row="2">
             <ListView.View>
