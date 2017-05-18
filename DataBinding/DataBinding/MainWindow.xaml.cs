@@ -104,7 +104,7 @@ namespace DataBinding
         {
             if (PeopleView.SelectedIndex >= 0)
             {
-                selectedPerson.Age = (uint)AgeSlider.Value;
+                //selectedPerson.Age = (uint)AgeSlider.Value;
                 Console.WriteLine(selectedPerson.Age);
                 ((Person)PeopleView.SelectedItem).Age = (uint)AgeSlider.Value;
                 //AgeBox.Text = AgeSlider.Value.ToString();

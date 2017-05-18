@@ -23,7 +23,7 @@
         </Menu>
         <ToolBar Grid.Row="1">
             <StackPanel Orientation="Horizontal">
-                <TextBox Name="NameBox" Text="{Binding Path=selectedPerson.Name, Mode=TwoWay}" Width="80" TextChanged="NameBox_TextChanged"/>
+                <TextBox Name="NameBox" Text="{Binding Path=selectedPerson.Name, Mode=TwoWay}" Width="100" TextChanged="NameBox_TextChanged"/>
                 <Separator Width="5" Visibility="Hidden"/>
                 <Slider Name="AgeSlider" Minimum="0" Maximum="200" TickFrequency="1" Width="150" Value="{Binding Path=selectedPerson.Age, Mode=TwoWay}" ValueChanged="AgeSlider_ValueChanged"/>
                 <TextBox Name="AgeBox" Text="{Binding Path=Value, ElementName=AgeSlider}" Width="50" IsReadOnly="True"/>
