@@ -1,0 +1,41 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Person">
+                <MenuItem Header="Add" Click="MenuItem_Click_1"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="NameBox" Text="{Binding Path=selectedPerson.Name, Mode=TwoWay}" Width="100" TextChanged="NameBox_TextChanged"/>
+                <Separator Width="5" Visibility="Hidden"/>
+                <Slider Name="AgeSlider" Minimum="0" Maximum="200" TickFrequency="1" Width="150" Value="{Binding Path=selectedPerson.Age, Mode=TwoWay}" ValueChanged="AgeSlider_ValueChanged"/>
+                <TextBox Name="AgeBox" Text="{Binding Path=Value, ElementName=AgeSlider}" Width="50" IsReadOnly="True"/>
+             </StackPanel>
+        </ToolBar>
+        <ListView Name="PeopleView" Grid.Row="2" SelectionChanged="PeopleView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="150" Header="Name"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Age}"  Width="100" Header="Age"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

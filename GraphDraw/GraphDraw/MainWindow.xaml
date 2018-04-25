@@ -1,0 +1,38 @@
+﻿<Window x:Class="GraphDraw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphDraw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Soubor">
+                <MenuItem Header="Nový" Name="newMenuItem" Click="newMenuItem_Click"/>
+                <Separator/>
+                <MenuItem Header="Konec" Name="exitMenuItem" Click="exitMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1">
+            <Button Name="exitButton" Content="Exit" Click="exitMenuItem_Click"/>
+            <Separator/>
+            <TextBlock VerticalAlignment="Center">Funkce: </TextBlock>
+            <ComboBox Name="aBox" Text="a" SelectionChanged="aBox_SelectionChanged"/>
+            <TextBlock VerticalAlignment="Center">*</TextBlock>
+            <ComboBox Name="fceBox" SelectionChanged="fceBox_SelectionChanged">
+                <ComboBoxItem>sin</ComboBoxItem>
+                <ComboBoxItem>cos</ComboBoxItem>
+            </ComboBox>
+            <TextBlock VerticalAlignment="Center">(</TextBlock>
+            <ComboBox Name="bBox" Text="b" SelectionChanged="bBox_SelectionChanged"/>
+            <TextBlock VerticalAlignment="Center">*x)</TextBlock>
+        </ToolBar>
+        <Canvas Name="canvas" Grid.Row="2"/>
+    </Grid>
+</Window>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿DataBank
 
 
@@ -18,3 +19,25 @@ AddMedium.xaml;MainWindow.xaml;
 
 False
 
+=======
+﻿DataBank
+
+
+winexe
+C#
+.cs
+H:\vyuka\pb069\PB069\DataBank\DataBank\obj\Debug\
+DataBank
+none
+false
+DEBUG;TRACE
+H:\vyuka\pb069\PB069\DataBank\DataBank\App.xaml
+2232933146
+
+11-2134853289
+13738642453
+AddMedium.xaml;MainWindow.xaml;
+
+True
+
+>>>>>>> 242d156b7a6e784cd2d7730fe8b07d84e6d818d2
