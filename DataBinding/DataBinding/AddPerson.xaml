@@ -21,7 +21,7 @@
             <Separator Width="5" Visibility="Hidden"/>
             <TextBlock>Age:</TextBlock>
             <Separator Width="20" Visibility="Hidden"/>
-            <Slider Name="AgeSlider" Minimum="0" Maximum="200" Value="0" Width="95"/>
+            <Slider Name="AgeSlider" Minimum="0" Maximum="100" TickFrequency="1" Value="0" Width="95"/>
             <Separator Width="5" Visibility="Hidden"/>
             <TextBox IsReadOnly="True" Text="{Binding Path=Value, ElementName=AgeSlider}" Width="50" TextAlignment="Right"/>
             <Separator Width="10" Visibility="Hidden"/>
