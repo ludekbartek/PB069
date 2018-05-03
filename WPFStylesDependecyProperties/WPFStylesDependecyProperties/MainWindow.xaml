@@ -27,9 +27,13 @@
                 <Separator/>
                 <MenuItem Header="Exit" Name="ExitMenuItem"/>
             </MenuItem>
+            <MenuItem Header="Person">
+                <MenuItem Name="Add" Click="Add_Click" Header="Add"/>
+                <MenuItem Name="Remove" Click="Remove_Click" Header="Remove"/>
+            </MenuItem>
         </Menu>
         <ToolBar Grid.Row="1">
-            <TextBlock>Text:</TextBlock>
+            <TextBlock VerticalAlignment="Center">Text:</TextBlock>
             <TextBox Style="{StaticResource MyTextBox}" Name="StringBox"/>
             <Button Name="AddBox" Click="AddBox_Click">Add</Button>
             <Separator/>

@@ -10,34 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPFStylesDependecyProperties
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddPersonDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddPersonDialog : Window
     {
-        public MainWindow()
+        public AddPersonDialog()
         {
             InitializeComponent();
-        }
-
-        private void AddBox_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Remove_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
