@@ -70,10 +70,10 @@ namespace GraphicalEditor
             Canvas.SetLeft(ellipse, obj.Y);
         }
 
-        private void DrawRectangle(GraphicalObject obj, Canvas paintCanvas)
+        private Polygon createRectangle(GraphicalObject obj)
         {
             Polygon rect = new Polygon();
-            Point p1 = new Point(),p2 = new Point(), p3 = new Point(),p4 = new Point();
+            Point p1 = new Point(), p2 = new Point(), p3 = new Point(), p4 = new Point();
             p1.X = obj.X;
             p1.Y = obj.Y;
             p2.X = obj.X + obj.dx;
@@ -87,6 +87,13 @@ namespace GraphicalEditor
             rect.Points.Add(p3);
             rect.Points.Add(p4);
             rect.Points.Add(p1);
+            rect.Stroke = Brushes.Black;
+            return rect;
+        }
+
+        private void DrawRectangle(GraphicalObject obj, Canvas paintCanvas)
+        {
+            Polygon rect = createRectangle(obj);
             rect.Stroke = Brushes.Black;
             paintCanvas.Children.Add(rect);
             

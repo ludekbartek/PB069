@@ -9,6 +9,17 @@
     <Window.Resources>
         <Style x:Key="MyTextBox">
             <Setter Property="Control.Width" Value="100"/>
+            <Setter Property="Control.Padding" Value="5"/>
+        </Style>
+        <Style x:Key="MyTextBlock"  BasedOn="{StaticResource MyTextBox}">
+            <Setter Property="Control.FlowDirection" Value="RightToLeft"/>
+        </Style>
+        <Style x:Key="ToolBarButton">
+            <Setter Property="Control.Width" Value="30"/>
+        </Style>
+        <Style x:Key="ToolBarSeparator">
+            <Setter Property="Control.Width" Value="1"/>
+            <Setter Property="Control.Visibility" Value="Hidden"/>
         </Style>
     </Window.Resources>
 
@@ -27,13 +38,44 @@
                 <Separator/>
                 <MenuItem Header="Exit" Name="ExitMenuItem"/>
             </MenuItem>
+            <MenuItem Header="Person">
+                <MenuItem Name="Add" Click="Add_Click" Header="Add"/>
+                <MenuItem Name="Remove" Click="Remove_Click" Header="Remove"/>
+            </MenuItem>
         </Menu>
         <ToolBar Grid.Row="1">
-            <TextBlock>Text:</TextBlock>
-            <TextBox Style="{StaticResource MyTextBox}" Name="StringBox"/>
-            <Button Name="AddBox" Click="AddBox_Click">Add</Button>
-            <Separator/>
-            <Button Name="Exit">Exit</Button>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource ToolBarButton}">
+                    <Image Source="Properties\NewFile_16x.png"/>
+                </Button>
+                <Separator Style="{StaticResource ToolBarSeparator}"/>
+                <Button Style="{StaticResource ToolBarButton}">
+                    <Image Source="Properties\OpenFile_16x.png"/>
+                </Button>
+                <Separator Style="{StaticResource ToolBarSeparator}"/>
+                <Button Style="{StaticResource ToolBarButton}">
+                    <Image Source="Properties\Save_16x.png"/>
+                </Button>
+                <Separator Style="{StaticResource ToolBarSeparator}"/>
+                <TextBlock VerticalAlignment="Center" Style="{StaticResource MyTextBlock}">Text</TextBlock>
+                <TextBox Style="{StaticResource MyTextBox}" Name="StringBox"/>
+                <Separator Style="{StaticResource ToolBarSeparator}"/>
+                <Button Name="AddBox" Click="AddBox_Click" Style="{StaticResource ToolBarButton}">Add</Button>
+                <Separator Style="{StaticResource ToolBarSeparator}"/>
+                <Button Name="Exit" Style="{StaticResource ToolBarButton}">Exit</Button>
+            </StackPanel>
         </ToolBar>
+        <ListView Name="PeopleView" Grid.Row="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">
+                        <GridViewColumnHeader>Jmeno</GridViewColumnHeader>
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Surname}">
+                        <GridViewColumnHeader>Prijmeni</GridViewColumnHeader>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
