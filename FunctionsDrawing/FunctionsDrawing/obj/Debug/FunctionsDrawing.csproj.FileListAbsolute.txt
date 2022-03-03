@@ -8,3 +8,14 @@ D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing
 D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.pdb
 D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.AddFunction.resources
 D:\work\pb069\PB069\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Form1.resources
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe.config
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.pdb
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csprojAssemblyReference.cache
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.AddFunction.resources
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Form1.resources
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Properties.Resources.resources
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.GenerateResource.cache
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.CoreCompileInputs.cache
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.exe
+C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.pdb

@@ -25,7 +25,10 @@
         </Menu>
         <ToolBar Grid.Row="1">
             <Button Name="New">
-                <Image Source="http://megaicons.net/static/img/icons_sizes/8/178/512/very-basic-file-icon.png"/>
+                <StackPanel Orientation="Vertical">
+                    <Image Source="http://megaicons.net/static/img/icons_sizes/8/178/512/very-basic-file-icon.png"/>
+                    <TextBlock>New</TextBlock>
+                </StackPanel>
             </Button>
             <Separator/>
             <Button Name="Open" Content="Open" Click="Open_Click"/>
