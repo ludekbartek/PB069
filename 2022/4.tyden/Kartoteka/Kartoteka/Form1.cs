@@ -62,7 +62,7 @@ namespace Kartoteka
             switch (shape.Type)
             {
                 case Shapes.LINE:
-                    graphics.DrawLine(Pens.Black, shape.X, shape.Y, shape.DX, shape.DY);
+                    graphics.DrawLine(Pens.Black, shape.X, shape.Y, shape.X+shape.DX, shape.Y + shape.DY);
                     break;
                 case Shapes.RECTANGLE:
                     graphics.DrawRectangle(Pens.Black, shape.X, shape.Y, shape.DX, shape.DY);
@@ -100,6 +100,15 @@ namespace Kartoteka
                     shape.DX = shape.X - e.X;
                     shape.X = e.X;
                 }
+                if (e.Y > shape.Y)
+                {
+                    shape.DY = e.Y - shape.Y;
+                }
+                else
+                {
+                    shape.DY = shape.Y - e.Y;
+                    shape.Y = e.Y;
+                }
                 Refresh();
             }
         }
@@ -135,7 +144,7 @@ namespace Kartoteka
 
         public override string ToString()
         {
-            return String.Format("{0};{1};{2};{3};{4]",(int)Type,X,Y,DX, DY);  
+            return String.Format("{0};{1};{2};{3};{4}",(int)Type,X,Y,DX, DY);  
         }
 
         public static Shape Parse(String text)
