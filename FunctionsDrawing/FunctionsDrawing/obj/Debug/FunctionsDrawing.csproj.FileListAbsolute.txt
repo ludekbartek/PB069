@@ -19,3 +19,15 @@ C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\Fu
 C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.CoreCompileInputs.cache
 C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.exe
 C:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.pdb
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe.config
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.exe
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\bin\Debug\FunctionsDrawing.pdb
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.AssemblyReference.cache
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.SuggestedBindingRedirects.cache
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.AddFunction.resources
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Form1.resources
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.Properties.Resources.resources
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.GenerateResource.cache
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.csproj.CoreCompileInputs.cache
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.exe
+E:\work\vyuka\pb069\PB069-cviceni\FunctionsDrawing\FunctionsDrawing\obj\Debug\FunctionsDrawing.pdb
